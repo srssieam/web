@@ -1,0 +1,407 @@
+
+*{
+    box-sizing: border-box;
+    font-family: 'Fira Sans';
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+h1{
+    font-size: 2.5rem;
+    text-align: center;
+}
+h2{
+    font-size: 1.5rem;
+    text-align: center;
+}
+p{
+    font-size: 1.2rem;
+    text-align: justify;
+    color: white;
+}
+a{
+    text-decoration: none;
+    color:white;
+}
+.dotted-hr{
+    width: 70px;
+    border: 7px dotted;
+    border-bottom:none;
+    color:white;
+}
+/*navbar start from here*/
+img{
+    width: 150px;
+    height: auto;
+    background-color: blueviolet;
+    border-radius: 50%;
+    margin-top: 20px;
+}
+[class*="col-"]{
+    width:100%;
+}
+.navbar{
+    background-color: rgb(67, 41, 116);
+    padding:1% 2%;
+    text-align: center;
+}
+.nav-heading h1{
+    
+    margin-top: 5px;
+    color:white;
+}
+.navbar::after{
+    content: '';
+    clear:both;
+    display: table;
+}
+.nav-menu{
+    display: flex;
+    flex-direction: column;
+}
+.nav-menu a {
+    text-decoration: none;
+    padding: 20px 20px;
+    margin: 10px;
+    color:white;
+    background-color: rgb(127, 53, 156);
+    border-radius: 10px;
+    text-transform: uppercase;
+    text-align: center;
+}
+.nav-menu a:hover {
+    background-color: rgb(26, 90, 99);
+}
+/*navbar ends here*/
+
+/*profile starts here*/
+
+.profile{
+    padding: 85px 5px;
+    position:relative;
+}
+.profile-description h1{
+    font-family: 'Satisfy', cursive;
+}
+.profile-description p{
+    text-align: center;
+    margin:5px auto;
+    padding: 10px;
+    font-size: 1rem;
+    color:gray;
+}
+.top-icon{
+    position:absolute;
+    width: 100px;
+    height: auto;
+    right: 10px;
+    top:5px;
+    animation-name: round;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+@keyframes round {
+    to{
+        rotate: 360deg;
+    }
+}
+
+.bottom-icon{
+    position:absolute;
+    width: 100px;
+    height: auto;
+    left: 10px;
+    bottom:5px;
+    animation-name: round;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+@keyframes round {
+    to{
+        rotate: 360deg;
+    }
+}
+
+.profile::after {
+    content: '';
+    clear:both;
+    display: table;
+}
+/* profile ends here */
+
+/* about me starts here */
+.about-me{
+    background-color: rgb(67, 41, 116);
+    color: white;
+    padding:1% 7%;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+.my-img .photo {
+    width: 250px;
+    border: 4px solid rgb(255, 255, 255);
+    border-radius: 45%;
+}
+.about-me p{
+    text-align: center;
+}
+.about-me a:hover{
+    color:aqua;
+}
+.cv-btn{
+    padding: 5px 10px;
+    background-color: rgb(20, 11, 104);
+    color:white;
+    font-size: 1rem;
+    border:none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.about-me::after{
+    content: '';
+    clear:both;
+    display:table;
+}
+/* about me ends here */
+
+/* professional experience start from here  */
+.professional-experience {
+    padding:2% 5%;
+}
+.card {
+    background-color:rgb(138, 139, 204);
+    border-radius: 5px;
+    height: 700px;
+    padding: 10px;
+    margin-bottom: 15px; 
+    transition: 0.3;
+}
+.card-icon{
+    text-align: center;
+}
+.card-icon img{
+    border:5px solid white;
+    width:100px;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: transparent;
+}
+.card-title h2{
+    padding:10px;
+    background-color: rgb(20, 11, 104);
+    color:white;
+}
+.card:hover {
+    box-shadow: 0px 4px 8px 5px black;
+}
+.skill-container li {
+    list-style: none;
+    margin: 30px 10px;
+    font-weight: bold;
+    position:relative;
+}
+.skill-container {
+    padding-right: 45px;
+}
+.skill-container  li::before {
+    position:absolute;
+    content:'';
+    width: 100%;
+    height: 10px;
+    background-color: rgba(148, 64, 231, 0.568);
+    top: calc(100% + 5px);
+    border-radius: 10px;
+    left:0;
+
+}
+.skill-container li::after{
+    content: '';
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 0;
+ 
+    width: 0;
+    height: 10px;
+    background-color: rgb(126, 32, 221);
+    border-radius: 1000px;
+
+    animation-duration: 3s;
+    animation-delay: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+ }
+.skill-container li.html::after {
+    animation-name: html;
+}
+@keyframes html  {
+    to{
+        width: 90%;
+    }
+}
+.skill-container li.css::after {
+    animation-name: css;
+ }
+ 
+ @keyframes css{
+     to{
+         width: 80%;
+     }
+ }
+ 
+ .skill-container li.bootstrap::after{
+     animation-name: bs;
+  }
+  
+  @keyframes bs{
+      to{
+          width: 85%;
+      }
+  }
+ 
+ .skill-container li.js::after{
+    animation-name: js;
+ }
+ 
+ @keyframes js{
+     to{
+         width: 75%;
+     }
+ }
+ 
+ .skill-container li.jquery::after{
+     animation-name: jq;
+  }
+  
+  @keyframes jq{
+      to{
+          width: 80%;
+      }
+  }
+ 
+ .skill-container li.node::after{
+    animation-name: node;
+ }
+ 
+ @keyframes node{
+     to{
+         width: 85%;
+     }
+ }
+ 
+ .skill-container li.express::after{
+     animation-name: express;
+  }
+  
+  @keyframes express{
+      to{
+          width: 75%;
+      }
+  }
+ 
+  .skill-container li.git::after{
+     animation-name: github;
+  }
+  
+  @keyframes github{
+      to{
+          width: 75%;
+      }
+  }
+  
+ .skill-container li.react::after{
+    animation-name: react;
+ }
+ 
+ @keyframes react{
+     to{
+         width: 65%;
+     }
+ }
+ .professional-experience::after{
+    content: '';
+    clear:both;
+    display:table;
+ }
+ /* professional experience ends here  */
+
+ .achiimg img{
+    border-radius: 0%;
+    background-color: transparent;
+ }
+.achivement-contact {
+    background-color: rgb(67, 41, 116);
+    padding: 1% 7%;
+    color:white;
+}
+.achivment p {
+    text-align: center;
+}
+.contact {
+    text-align: center;
+}
+.contact input, textarea{
+    width:100%;
+    padding: 10px;
+    text-align: center;
+    resize:none;
+    border: none;
+    border-radius: 8px;
+}
+.achivement-contact::after{
+    content: '';
+    clear: both;
+    display: table;
+}
+.contact button{
+    padding:10px;
+    background-color: rgb(17, 31, 107);
+    margin:5px;
+    width: 100px;
+    border:none;
+    border-radius: 5px;
+    color:white;
+}
+.contact button:hover{
+    background-color: rgb(0, 45, 128);
+    color:aqua;
+}
+.moreway {
+    text-align: center;
+}
+.media-button .btn{
+    width: 50px;
+    font-size: 32px;
+    border-radius: 25px;
+    margin: 10px;
+    padding: 5px;
+    border: none;
+    cursor: pointer;
+}
+.media-button .btn:hover {
+    background-color: gray;
+}
+
+/* footer start */
+.footer{
+    background-color: black;
+    color:white;
+    padding: 20px;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.footer-menu a{
+    display: block;
+    margin: 15px 0px;
+}
+.footer a:hover{
+    color:aqua;
+}
+.footer::after{
+    content:'';
+    clear:both;
+    display: table;
+}
+/* footer end */
